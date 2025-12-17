@@ -1,2 +1,3 @@
 #!/bin/bash
+# Based on Mark Shust's docker-magento: https://github.com/markshust/docker-magento
 docker-compose exec -u magento php php "$@"

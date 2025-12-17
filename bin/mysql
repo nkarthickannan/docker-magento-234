@@ -1,2 +1,11 @@
 #!/bin/bash
-docker-compose exec mysql mysql -u magento -pmagento magento "$@"
+# Based on Mark Shust's docker-magento: https://github.com/markshust/docker-magento
+# Intelligently detects TTY availability and uses appropriate docker-compose flags
+
+if [ -t 0 ]; then
+    # Interactive TTY available - use -it for interactive mode
+    docker-compose exec -it mysql mysql -u magento -pmagento magento "$@"
+else
+    # No TTY (piped input/output, CI/CD, background processes) - use -T
+    docker-compose exec -T mysql mysql -u magento -pmagento magento "$@"
+fi
