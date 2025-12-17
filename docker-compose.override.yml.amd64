@@ -1,0 +1,16 @@
+# Docker Compose Override File
+# This file automatically merges with docker-compose.yml
+# Add local customizations here without modifying the base configuration
+
+services:
+  # PHP-FPM service - AMD 64 processor support
+  php:
+    platform: linux/amd64
+
+  # MySQL service - AMD 64 processor support
+  mysql:
+    platform: linux/amd64
+
+  # Nginx service - AMD 64 processor support
+  nginx:
+    platform: linux/amd64

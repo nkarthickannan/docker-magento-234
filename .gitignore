@@ -27,6 +27,10 @@ Thumbs.db
 
 # Docker Volumes and Data
 mysql_data/
+docker-compose.override.yml
+
+# Magento Source Code
+src/
 
 # Logs
 *.log
