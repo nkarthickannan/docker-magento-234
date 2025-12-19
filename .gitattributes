@@ -1,0 +1,58 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+*.bash text eol=lf
+bin/* text eol=lf
+
+# Docker files
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf
+docker-compose.*.yml text eol=lf
+
+# Configuration files
+.env* text eol=lf
+.editorconfig text eol=lf
+*.conf text eol=lf
+*.cnf text eol=lf
+*.ini text eol=lf
+
+# Markdown
+*.md text eol=lf
+README.md text eol=lf
+CLAUDE.md text eol=lf
+CHANGELOG.md text eol=lf
+
+# JSON and YAML
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text eol=lf
+*.ico binary
+
+# Archive files
+*.zip binary
+*.tar binary
+*.tar.gz binary
+*.rar binary
+*.gz binary
+
+# Font files
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
+# Export ignores - exclude from archives
+.gitignore export-ignore
+.gitattributes export-ignore
+.env.example export-ignore
+CLAUDE.md export-ignore
+src/ export-ignore
